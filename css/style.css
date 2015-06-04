@@ -1,0 +1,20 @@
+.foundation-bar {
+  margin-bottom: 20px;
+}
+
+.main-section {
+  background: #c5c5d0;
+  padding: 20px;
+}
+nav, ul {
+  background: #6a6880;
+}
+.top-bar, nav.top-bar {
+  background: none;
+}
+.left-off-canvas-menu {
+  background: green;
+}
+
+
+

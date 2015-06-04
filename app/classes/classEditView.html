@@ -1,0 +1,110 @@
+<form class="form-horizontal"
+      name="classForm"
+      ng-submit="vm.submit()"
+      ng-model-options="{updateOn:'submit'}"
+      novalidate>
+
+    <fieldset>
+        <legend>New Bottle</legend>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputClassName">Vintage</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputClassName"
+                       name="inputClassName"
+                       type="text"
+                       placeholder="Vintage"
+                       ng-model="vm.class.className"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputStartDate">Year</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       type="text"
+                       id="inputStartDate"
+                       name="inputStartDate"
+                       ng-model="vm.dates.startDate"
+                       ng-model-options="{ getterSetter: true }"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputEndDate">Optimal drinking date</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       type="text"
+                       id="inputEndDate"
+                       name="inputEndDate"
+                       ng-model="vm.dates.endDate"
+                       ng-model-options="{ getterSetter: true }"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputInstructorEmail">Vineyard</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       type="text"
+                       id="inputInstructorEmail"
+                       name="inputInstructorEmail"
+                       placeholder="Vineyard"
+                       ng-model="vm.class.vineyard"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputDescription">Description</label>
+
+            <div class="col-md-10">
+                <textarea class="form-control"
+                          id="inputDescription"
+                          placeholder="Description"
+                          rows="3"
+                          ng-model="vm.class.description"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-browns"
+                            style="width:80px;margin-right:10px"
+                            type="submit">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width:70px"
+                            type="button"
+                            ng-click="vm.cancel()">
+                        Cancel
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width:70px"
+                            type="button"
+                            ng-click="classForm.$rollbackViewValue()">
+                        Reset
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div ng-if="classForm.$submitted">
+            Data was submitted
+        </div>
+    </fieldset>
+</form>
+

@@ -1,0 +1,38 @@
+<div class="panel panel-browns">
+    <div class="panel-heading"
+         style="font-size:large">
+        your wine list
+    </div>
+
+    <div class="panel-body">
+<!--        <table class="table">-->
+            <table>
+            <thead>
+            <tr>
+                <td>bottle</td>
+                <td></td>
+                <td>Description</td>
+                <td>year</td>
+                <td>variety</td>
+                <td>region</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="class in vm.classes">
+                 <td>{{class.bottle}}</td>
+                <td><img src="img/bottle1.jpg"/></td>
+                <td>{{class.description}}</td>
+                <td>{{class.year}}</td>
+                <td>{{class.variety}}</td>
+                <td>{{class.region}}</td>                
+                <td>
+                    <a class="btn btn-browns"
+                       ng-href="#classEdit/{{class.classId}}">
+                        edit
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
